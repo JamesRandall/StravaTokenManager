@@ -10,6 +10,7 @@
     <RepositoryUrl>https://github.com/JamesRandall/StravaTokenManager</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageLicenseUrl>https://github.com/JamesRandall/FunctionMonkey/blob/master/LICENSE</PackageLicenseUrl>
   </PropertyGroup>
 
   <ItemGroup>
