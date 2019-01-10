@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccidentalFish.Strava.TokenManager.Abstractions", "src\AccidentalFish.Strava.TokenManager.Abstractions\AccidentalFish.Strava.TokenManager.Abstractions.csproj", "{CCB17B68-36BA-4E48-A199-3129520BD10E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccidentalFish.Strava.TokenManager", "src\AccidentalFish.Strava.TokenManager\AccidentalFish.Strava.TokenManager.csproj", "{D576271F-3A53-4039-AD91-835A26A7B2D6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccidentalFish.Strave.TokenManager.AzureTableStorageTokenStore", "src\AccidentalFish.Strave.TokenManager.AzureTableStorageTokenStore\AccidentalFish.Strave.TokenManager.AzureTableStorageTokenStore.csproj", "{74676126-D2E3-4302-8C51-B4AE709A30DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{B2F4304B-E6E7-48F9-877A-0A26DA2C1773}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{B5DA2B4C-B877-4B93-A7AD-B16BA5A8AA2E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccidentalFish.Strava.TokenManager.Tests", "tests\AccidentalFish.Strava.TokenManager.Tests\AccidentalFish.Strava.TokenManager.Tests.csproj", "{D5EC6CF8-CE6F-4F58-9EB0-34F3AEB74509}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CCB17B68-36BA-4E48-A199-3129520BD10E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCB17B68-36BA-4E48-A199-3129520BD10E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCB17B68-36BA-4E48-A199-3129520BD10E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCB17B68-36BA-4E48-A199-3129520BD10E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D576271F-3A53-4039-AD91-835A26A7B2D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D576271F-3A53-4039-AD91-835A26A7B2D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D576271F-3A53-4039-AD91-835A26A7B2D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D576271F-3A53-4039-AD91-835A26A7B2D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74676126-D2E3-4302-8C51-B4AE709A30DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74676126-D2E3-4302-8C51-B4AE709A30DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74676126-D2E3-4302-8C51-B4AE709A30DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74676126-D2E3-4302-8C51-B4AE709A30DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5EC6CF8-CE6F-4F58-9EB0-34F3AEB74509}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5EC6CF8-CE6F-4F58-9EB0-34F3AEB74509}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5EC6CF8-CE6F-4F58-9EB0-34F3AEB74509}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5EC6CF8-CE6F-4F58-9EB0-34F3AEB74509}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CCB17B68-36BA-4E48-A199-3129520BD10E} = {B2F4304B-E6E7-48F9-877A-0A26DA2C1773}
+		{D576271F-3A53-4039-AD91-835A26A7B2D6} = {B2F4304B-E6E7-48F9-877A-0A26DA2C1773}
+		{74676126-D2E3-4302-8C51-B4AE709A30DD} = {B2F4304B-E6E7-48F9-877A-0A26DA2C1773}
+		{D5EC6CF8-CE6F-4F58-9EB0-34F3AEB74509} = {B5DA2B4C-B877-4B93-A7AD-B16BA5A8AA2E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B36BE12-D6F0-414C-9DA6-DBBEDE14EF0C}
+	EndGlobalSection
+EndGlobal
