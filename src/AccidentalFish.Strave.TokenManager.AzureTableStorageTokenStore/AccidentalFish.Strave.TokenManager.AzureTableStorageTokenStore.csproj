@@ -12,6 +12,7 @@
     <Description>Azure Table Storage repository for tokens</Description>
     <Copyright>(c) 2019 James Randall</Copyright>
     <PackageLicenseUrl>https://github.com/JamesRandall/FunctionMonkey/blob/master/LICENSE</PackageLicenseUrl>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

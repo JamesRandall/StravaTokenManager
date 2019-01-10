@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{B5DA2B4C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccidentalFish.Strava.TokenManager.Tests", "tests\AccidentalFish.Strava.TokenManager.Tests\AccidentalFish.Strava.TokenManager.Tests.csproj", "{D5EC6CF8-CE6F-4F58-9EB0-34F3AEB74509}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccidentalFish.Strava.TokenManager.RedisCache", "src\AccidentalFish.Strava.TokenManager.RedisCache\AccidentalFish.Strava.TokenManager.RedisCache.csproj", "{D2F9AE0E-B075-4F51-B3D4-0FEFC73FFCD3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{D5EC6CF8-CE6F-4F58-9EB0-34F3AEB74509}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5EC6CF8-CE6F-4F58-9EB0-34F3AEB74509}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5EC6CF8-CE6F-4F58-9EB0-34F3AEB74509}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2F9AE0E-B075-4F51-B3D4-0FEFC73FFCD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2F9AE0E-B075-4F51-B3D4-0FEFC73FFCD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2F9AE0E-B075-4F51-B3D4-0FEFC73FFCD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2F9AE0E-B075-4F51-B3D4-0FEFC73FFCD3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +52,7 @@ Global
 		{D576271F-3A53-4039-AD91-835A26A7B2D6} = {B2F4304B-E6E7-48F9-877A-0A26DA2C1773}
 		{74676126-D2E3-4302-8C51-B4AE709A30DD} = {B2F4304B-E6E7-48F9-877A-0A26DA2C1773}
 		{D5EC6CF8-CE6F-4F58-9EB0-34F3AEB74509} = {B5DA2B4C-B877-4B93-A7AD-B16BA5A8AA2E}
+		{D2F9AE0E-B075-4F51-B3D4-0FEFC73FFCD3} = {B2F4304B-E6E7-48F9-877A-0A26DA2C1773}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8B36BE12-D6F0-414C-9DA6-DBBEDE14EF0C}

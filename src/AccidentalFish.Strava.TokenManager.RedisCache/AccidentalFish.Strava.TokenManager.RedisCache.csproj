@@ -2,21 +2,22 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Authors>James Randall</Authors>
-    <Company>Accidental Fish</Company>
-    <Description>Manages the Strava token exchange process and tokens</Description>
-    <Copyright>(c) 2019 James Randall</Copyright>
-    <PackageProjectUrl>https://github.com/JamesRandall/StravaTokenManager</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/JamesRandall/StravaTokenManager</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageLicenseUrl>https://github.com/JamesRandall/FunctionMonkey/blob/master/LICENSE</PackageLicenseUrl>
     <Version>1.0.1</Version>
+    <Authors>James Randall</Authors>
+    <Company>Accidental Fish</Company>
+    <Description>Redis cache support for the Strava Token Manager</Description>
+    <Copyright>(c) 2019 James Randall</Copyright>
+    <PackageLicenseUrl>https://github.com/JamesRandall/FunctionMonkey/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/JamesRandall/StravaTokenManager</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/JamesRandall/StravaTokenManager</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Flurl.Http" Version="2.4.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.1.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="StackExchange.Redis" Version="2.0.519" />
   </ItemGroup>
 
   <ItemGroup>

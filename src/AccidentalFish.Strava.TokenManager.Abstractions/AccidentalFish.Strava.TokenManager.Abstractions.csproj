@@ -11,6 +11,7 @@
     <PackageProjectUrl>https://github.com/JamesRandall/StravaTokenManager</PackageProjectUrl>
     <RepositoryUrl>https://github.com/JamesRandall/StravaTokenManager</RepositoryUrl>
     <PackageLicenseUrl>https://github.com/JamesRandall/FunctionMonkey/blob/master/LICENSE</PackageLicenseUrl>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
 </Project>
