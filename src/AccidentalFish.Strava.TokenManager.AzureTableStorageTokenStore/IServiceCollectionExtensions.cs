@@ -1,9 +1,8 @@
-﻿using System;
-using AccidentalFish.Strava.TokenManager.Abstractions;
-using AccidentalFish.Strave.TokenManager.AzureTableStorageTokenStore.Implementation;
+﻿using AccidentalFish.Strava.TokenManager.Abstractions;
+using AccidentalFish.Strava.TokenManager.AzureTableStorageTokenStore.Implementation;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace AccidentalFish.Strave.TokenManager.AzureTableStorageTokenStore
+namespace AccidentalFish.Strava.TokenManager.AzureTableStorageTokenStore
 {
     // ReSharper disable once InconsistentNaming
     public static class IServiceCollectionExtensions

@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Threading.Tasks;
 using AccidentalFish.Strava.TokenManager.Abstractions;
-using AccidentalFish.Strave.TokenManager.AzureTableStorageTokenStore.Model;
+using AccidentalFish.Strava.TokenManager.AzureTableStorageTokenStore.Model;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Table;
 
-namespace AccidentalFish.Strave.TokenManager.AzureTableStorageTokenStore.Implementation
+namespace AccidentalFish.Strava.TokenManager.AzureTableStorageTokenStore.Implementation
 {
     internal class TokenRepository : ITokenRepository
     {

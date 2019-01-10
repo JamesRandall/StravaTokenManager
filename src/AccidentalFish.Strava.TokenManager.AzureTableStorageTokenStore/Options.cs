@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AccidentalFish.Strave.TokenManager.AzureTableStorageTokenStore
+﻿namespace AccidentalFish.Strava.TokenManager.AzureTableStorageTokenStore
 {
     public class Options
     {

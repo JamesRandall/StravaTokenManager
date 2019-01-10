@@ -1,8 +1,8 @@
 using System;
-using AccidentalFish.Strave.TokenManager.AzureTableStorageTokenStore.Extensions;
+using AccidentalFish.Strava.TokenManager.AzureTableStorageTokenStore.Extensions;
 using Microsoft.WindowsAzure.Storage.Table;
 
-namespace AccidentalFish.Strave.TokenManager.AzureTableStorageTokenStore.Model
+namespace AccidentalFish.Strava.TokenManager.AzureTableStorageTokenStore.Model
 {
     internal class AccessTokenTableEntity : TableEntity
     {

@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccidentalFish.Strava.Token
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccidentalFish.Strava.TokenManager", "src\AccidentalFish.Strava.TokenManager\AccidentalFish.Strava.TokenManager.csproj", "{D576271F-3A53-4039-AD91-835A26A7B2D6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccidentalFish.Strave.TokenManager.AzureTableStorageTokenStore", "src\AccidentalFish.Strave.TokenManager.AzureTableStorageTokenStore\AccidentalFish.Strave.TokenManager.AzureTableStorageTokenStore.csproj", "{74676126-D2E3-4302-8C51-B4AE709A30DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccidentalFish.Strava.TokenManager.AzureTableStorageTokenStore", "src\AccidentalFish.Strava.TokenManager.AzureTableStorageTokenStore\AccidentalFish.Strava.TokenManager.AzureTableStorageTokenStore.csproj", "{74676126-D2E3-4302-8C51-B4AE709A30DD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{B2F4304B-E6E7-48F9-877A-0A26DA2C1773}"
 EndProject

@@ -1,4 +1,4 @@
-namespace AccidentalFish.Strava.TokenManager.Implementation
+namespace AccidentalFish.Strava.TokenManager.Model
 {
     internal class TokenExchangeAthlete
     {

@@ -1,7 +1,7 @@
 using System;
 using System.Text;
 
-namespace AccidentalFish.Strave.TokenManager.AzureTableStorageTokenStore.Extensions
+namespace AccidentalFish.Strava.TokenManager.AzureTableStorageTokenStore.Extensions
 {
     internal static class StringExtensions
     {
