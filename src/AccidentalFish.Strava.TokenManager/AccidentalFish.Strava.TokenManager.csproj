@@ -2,6 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>James Randall</Authors>
+    <Company>Accidental Fish</Company>
+    <Description>Manages the Strava token exchange process and tokens</Description>
+    <Copyright>(c) 2019 James Randall</Copyright>
+    <PackageProjectUrl>https://github.com/JamesRandall/StravaTokenManager</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/JamesRandall/StravaTokenManager</RepositoryUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>

@@ -2,6 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageProjectUrl>https://github.com/JamesRandall/StravaTokenManager</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/JamesRandall/StravaTokenManager</RepositoryUrl>
+    <Authors>James Randall</Authors>
+    <Company>Accidental Fish</Company>
+    <Product>AccidentalFish.Strave.TokenManager.AzureTableStorageTokenStore</Product>
+    <Description>Azure Table Storage repository for tokens</Description>
+    <Copyright>(c) 2019 James Randall</Copyright>
   </PropertyGroup>
 
   <ItemGroup>
