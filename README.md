@@ -1,7 +1,8 @@
-![Master build status](https://accidentalfish.visualstudio.com/Strava%20Token%20Manager/_apis/build/status/Build%20and%20Test?branchName=master) Master
-![Production build status](https://accidentalfish.visualstudio.com/Strava%20Token%20Manager/_apis/build/status/Build%20and%20Test?branchName=production) Production
-
 # Strava Token Manager
+
+![Master build status](https://accidentalfish.visualstudio.com/Strava%20Token%20Manager/_apis/build/status/Build%20and%20Test?branchName=master) Master
+
+![Production build status](https://accidentalfish.visualstudio.com/Strava%20Token%20Manager/_apis/build/status/Build%20and%20Test?branchName=production) Production
 
 _Before reading this guide it is highly recommended you read the [Strava authentication documentation](https://developers.strava.com/docs/authentication/)._
 
