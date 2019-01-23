@@ -4,7 +4,7 @@ using AccidentalFish.Strava.TokenManager.Implementation;
 
 namespace AccidentalFish.Strava.TokenManager.Model
 {
-    internal class TokenExchangeResponse
+    internal class StravaTokenExchangeResponse
     {
         public string token_type { get; set; }
             

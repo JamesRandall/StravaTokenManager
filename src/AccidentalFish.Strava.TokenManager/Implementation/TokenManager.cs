@@ -77,7 +77,7 @@ namespace AccidentalFish.Strava.TokenManager.Implementation
             throw new TokenSetExpiredException();
         }
 
-        public async Task<TokenSet> TokenExchange(string code)
+        public async Task<TokenExchangeResponse> TokenExchange(string code)
         {
             TokenExchangePayload payload = new TokenExchangePayload
             {
@@ -87,25 +87,37 @@ namespace AccidentalFish.Strava.TokenManager.Implementation
                 grant_type = "authorization_code"
             };
             
-            TokenExchangeResponse tokenResponse = await _tokenEndpoint
+            StravaTokenExchangeResponse stravaTokenResponse = await _tokenEndpoint
                 .PostJsonAsync(payload)
-                .ReceiveJson<TokenExchangeResponse>();
+                .ReceiveJson<StravaTokenExchangeResponse>();
 
-            await SaveTokens(tokenResponse.athlete.id, tokenResponse.access_token, tokenResponse.refresh_token,
-                ExpiresAtUtc(tokenResponse));
+            await SaveTokens(stravaTokenResponse.athlete.id, stravaTokenResponse.access_token, stravaTokenResponse.refresh_token,
+                ExpiresAtUtc(stravaTokenResponse));
 
-            return new TokenSet
+            return new TokenExchangeResponse
             {
-                AthleteId = tokenResponse.athlete.id,
-                AccessToken = tokenResponse.access_token,
-                ExpiresAtUtc = ExpiresAtUtc(tokenResponse)
+                TokenSet = new TokenSet
+                {
+                    AthleteId = stravaTokenResponse.athlete.id,
+                    AccessToken = stravaTokenResponse.access_token,
+                    ExpiresAtUtc = ExpiresAtUtc(stravaTokenResponse)
+                },
+                AthleteSummary = new AthleteSummary
+                {
+                    EmailAddress = stravaTokenResponse.athlete?.email,
+                    FirstName = stravaTokenResponse.athlete?.firstname,
+                    Id = stravaTokenResponse.athlete?.id,
+                    LastName = stravaTokenResponse.athlete?.lastname,
+                    MeasurementPreference = stravaTokenResponse.athlete?.measurement_preference,
+                    ProfileImageUrl = stravaTokenResponse.athlete?.profile
+                }                
             };
         }
 
-        private static DateTime ExpiresAtUtc(TokenExchangeResponse tokenResponse)
+        private static DateTime ExpiresAtUtc(StravaTokenExchangeResponse stravaTokenResponse)
         {
             // strava returns this in seconds rather than the milliseconds in JavaScript's getTime()
-            return new DateTime(1970, 01, 01).AddSeconds(tokenResponse.expires_at);
+            return new DateTime(1970, 01, 01).AddSeconds(stravaTokenResponse.expires_at);
         }
 
         private async Task<RepositoryEnrichedTokenSet> RenewToken(string athleteId, string refreshToken, string existingAccessToken)
@@ -118,21 +130,21 @@ namespace AccidentalFish.Strava.TokenManager.Implementation
                 grant_type = "refresh_token"
             };
 
-            TokenExchangeResponse tokenResponse = await _tokenEndpoint
+            StravaTokenExchangeResponse stravaTokenResponse = await _tokenEndpoint
                 .PostJsonAsync(payload)
-                .ReceiveJson<TokenExchangeResponse>();
+                .ReceiveJson<StravaTokenExchangeResponse>();
             
-            await SaveTokens(athleteId, tokenResponse.access_token, tokenResponse.refresh_token,
-                ExpiresAtUtc(tokenResponse));
+            await SaveTokens(athleteId, stravaTokenResponse.access_token, stravaTokenResponse.refresh_token,
+                ExpiresAtUtc(stravaTokenResponse));
            
             await DeleteOldAccessToken(existingAccessToken);
 
             return new RepositoryEnrichedTokenSet
             {
-                AccessToken = tokenResponse.access_token,
-                ExpiresAtUtc = ExpiresAtUtc(tokenResponse),
+                AccessToken = stravaTokenResponse.access_token,
+                ExpiresAtUtc = ExpiresAtUtc(stravaTokenResponse),
                 AthleteId = athleteId,
-                RefreshToken = tokenResponse.refresh_token
+                RefreshToken = stravaTokenResponse.refresh_token
             };
         }
 

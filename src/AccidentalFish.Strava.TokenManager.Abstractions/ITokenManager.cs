@@ -30,7 +30,7 @@ namespace AccidentalFish.Strava.TokenManager.Abstractions
         /// and refresh token and persists them in the store and cache
         /// </summary>
         /// <param name="code">The code returned from the authentication flow</param>
-        /// <returns>A token set</returns>
-        Task<TokenSet> TokenExchange(string code);
+        /// <returns>A response with the tokens and the athlete summary</returns>
+        Task<TokenExchangeResponse> TokenExchange(string code);
     }
 }

@@ -26,7 +26,7 @@ namespace AccidentalFish.Strava.TokenManager.Tests.Implementation.TokenManagerTe
                 DateTime expiresAt = new DateTime(1970, 1, 1);
 
                 // Arrange
-                string tokenResponse = JsonConvert.SerializeObject(new TokenExchangeResponse
+                string tokenResponse = JsonConvert.SerializeObject(new StravaTokenExchangeResponse
                 {
                     access_token = accessToken,
                     athlete = new TokenExchangeAthlete { id = athleteId },
@@ -39,12 +39,13 @@ namespace AccidentalFish.Strava.TokenManager.Tests.Implementation.TokenManagerTe
                 httpTest.RespondWith(tokenResponse);
 
                 // Act
-                TokenSet result = await _testSubject.TokenExchange("0");
+                TokenExchangeResponse result = await _testSubject.TokenExchange("0");
 
                 // Assert
-                Assert.Equal(accessToken, result.AccessToken);
-                Assert.Equal(expiresAt, result.ExpiresAtUtc);
-                Assert.Equal(athleteId, result.AthleteId);
+                Assert.Equal(accessToken, result.TokenSet.AccessToken);
+                Assert.Equal(expiresAt, result.TokenSet.ExpiresAtUtc);
+                Assert.Equal(athleteId, result.TokenSet.AthleteId);
+                Assert.Equal(athleteId, result.AthleteSummary.Id);
                 httpTest.ShouldHaveCalled(_options.TokenEndPoint)
                     .WithVerb(HttpMethod.Post);
                 await _tokenCache.Received().SaveTokenSet(athleteId, accessToken, refreshToken, expiresAt);

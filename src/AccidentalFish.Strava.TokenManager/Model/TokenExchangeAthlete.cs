@@ -11,6 +11,7 @@ namespace AccidentalFish.Strava.TokenManager.Model
         public string profile { get; set; }
         
         public string email { get; set; }
-       
+
+        public string measurement_preference { get; set; }
     }
 }

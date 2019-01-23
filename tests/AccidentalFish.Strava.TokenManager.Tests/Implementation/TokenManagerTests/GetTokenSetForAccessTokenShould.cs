@@ -73,7 +73,7 @@ namespace AccidentalFish.Strava.TokenManager.Tests.Implementation.TokenManagerTe
                     RefreshToken = "3"
                 };
                 _tokenRepository.GetForAccessToken("1").Returns(tokenSet);
-                httpTest.RespondWith(JsonConvert.SerializeObject(new TokenExchangeResponse
+                httpTest.RespondWith(JsonConvert.SerializeObject(new StravaTokenExchangeResponse
                 {
                     access_token = "4",
                     athlete = new TokenExchangeAthlete { id = "1" },
