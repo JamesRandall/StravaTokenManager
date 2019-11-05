@@ -21,8 +21,11 @@ namespace AccidentalFish.Strava.TokenManager.AzureTableStorageTokenStore.Impleme
         }
 
         public async Task SaveTokenSet(string athleteId, string accessToken, string refreshToken, DateTime accessTokenExpiresAtUtc)
-        {
-            AccessTokenTableEntity byAthelete = new AccessTokenTableEntity
+		{
+			await _byAccessTokenTable.CreateIfNotExistsAsync();
+			await _byAtheleteIdTable.CreateIfNotExistsAsync();
+
+			AccessTokenTableEntity byAthelete = new AccessTokenTableEntity
             {
                 AccessToken = accessToken,
                 AccessTokenExpiryUtc = accessTokenExpiresAtUtc,
